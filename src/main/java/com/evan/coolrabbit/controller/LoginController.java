@@ -22,10 +22,10 @@ public class LoginController {
     @CrossOrigin
     @PostMapping(value = "api/login")
     @ResponseBody
-    public Result logini(@RequestBody User requestUser) {
-        String username = requestUser.getUsername();
+    public Result login(@RequestBody User requestUser) {
+        String username = requestUser.getUsUserName();
         username = HtmlUtils.htmlEscape(username);
-        User user = userService.getNameAndPassword(username, requestUser.getPassword());
+        User user = userService.getNameAndPassword(username, requestUser.getUsPassword());
         if(null == user) {
             String message = "账号密码错误";
             System.out.println("test");

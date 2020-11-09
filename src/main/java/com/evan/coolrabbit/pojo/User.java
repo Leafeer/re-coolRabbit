@@ -12,33 +12,69 @@ import javax.persistence.*;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    int id;
+    @Column(name = "usUserId")
+    int usUserId;
 
-    String username;
-    String password;
+    String usUserName;
+    String usPassword;
+    String usEmail;
+    int usAge;
+    int usAdminId;
+    String usAdminName;
 
-    public int getId() {
-        return id;
+    public int getUsUserId() {
+        return usUserId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setUsUserId(int usUserId) {
+        this.usUserId = usUserId;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUsUserName() {
+        return usUserName;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUsUserName(String usUserName) {
+        this.usUserName = usUserName;
     }
 
-    public String getPassword() {
-        return password;
+    public String getUsPassword() {
+        return usPassword;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setUsPassword(String usPassword) {
+        this.usPassword = usPassword;
+    }
+
+    public String getUsEmail() {
+        return usEmail;
+    }
+
+    public void setUsEmail(String usEmail) {
+        this.usEmail = usEmail;
+    }
+
+    public int getUsAge() {
+        return usAge;
+    }
+
+    public void setUsAge(int usAge) {
+        this.usAge = usAge;
+    }
+
+    public int getUsAdminId() {
+        return usAdminId;
+    }
+
+    public void setUsAdminId(int usAdminId) {
+        this.usAdminId = usAdminId;
+    }
+
+    public String getUsAdminName() {
+        return usAdminName;
+    }
+
+    public void setUsAdminName(String usAdminName) {
+        this.usAdminName = usAdminName;
     }
 }
