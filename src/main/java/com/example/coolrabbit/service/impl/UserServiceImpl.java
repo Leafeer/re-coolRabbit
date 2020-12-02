@@ -2,14 +2,13 @@ package com.example.coolrabbit.service.impl;
 
 import com.example.coolrabbit.dao.UserMapper;
 import com.example.coolrabbit.entity.User;
-import com.example.coolrabbit.exceptions.BaseError;
 import com.example.coolrabbit.exceptions.BaseException;
 import com.example.coolrabbit.response.CommonEnum;
 import com.example.coolrabbit.service.UserService;
 import com.example.coolrabbit.utils.MD5Util;
 import com.example.coolrabbit.vo.LoginVo;
 import com.example.coolrabbit.vo.RegisterVo;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.coolrabbit.vo.UserVo;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -34,7 +33,14 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void login(LoginVo loginVo) {
-
+    public UserVo login(LoginVo loginVo) {
+        User user=userMapper.selectByEmailAndPassword(loginVo.getEmail(),MD5Util.getMD5_32_lower(loginVo.getPassword()));
+        if(user==null){
+            throw new BaseException(CommonEnum.ACCOUNT_WRONG);
+        }
+        UserVo userVo=new UserVo();
+        userVo.setEmail(user.getEmail());
+        userVo.setName(user.getName());
+        return userVo;
     }
 }
