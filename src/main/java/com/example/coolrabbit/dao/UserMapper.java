@@ -1,6 +1,6 @@
-package com.example.coderabbit.dao;
+package com.example.coolrabbit.dao;
 
-import com.example.coderabbit.entity.User;
+import com.example.coolrabbit.entity.User;
 
 public interface UserMapper {
     int deleteByPrimaryKey(Integer id);

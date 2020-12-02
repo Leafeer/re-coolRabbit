@@ -1,13 +1,13 @@
-package com.example.coderabbit;
+package com.example.coolrabbit;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CoderabbitApplication {
+public class CoolrabbitApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CoderabbitApplication.class, args);
+        SpringApplication.run(CoolrabbitApplication.class, args);
     }
 
 }

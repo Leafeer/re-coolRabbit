@@ -1,4 +1,4 @@
-package com.example.coderabbit.config;
+package com.example.coolrabbit.config;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
 import org.springframework.context.annotation.Bean;

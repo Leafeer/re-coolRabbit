@@ -1,6 +1,6 @@
-package com.example.coderabbit.dao;
+package com.example.coolrabbit.dao;
 
-import com.example.coderabbit.entity.Folder;
+import com.example.coolrabbit.entity.Folder;
 
 public interface FolderMapper {
     int deleteByPrimaryKey(Integer folderId);

@@ -1,6 +1,6 @@
-package com.example.coderabbit.dao;
+package com.example.coolrabbit.dao;
 
-import com.example.coderabbit.entity.Note;
+import com.example.coolrabbit.entity.Note;
 
 public interface NoteMapper {
     int deleteByPrimaryKey(Integer noteId);
