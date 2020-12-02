@@ -1,7 +1,12 @@
 package com.example.coolrabbit.dao;
 
 import com.example.coolrabbit.entity.User;
+import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
+@Component
+@Mapper
 public interface UserMapper {
     int deleteByPrimaryKey(Integer id);
 
@@ -14,4 +19,6 @@ public interface UserMapper {
     int updateByPrimaryKeySelective(User record);
 
     int updateByPrimaryKey(User record);
+
+    User selectByEmail(String email);
 }
